@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans:
+    "Segoe UI Variable Text", "Segoe UI", system-ui, -apple-system,
+    BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+}
+
+@layer base {
+  html {
+    color-scheme: light;
+  }
+
+  body {
+    min-width: 320px;
+    margin: 0;
+    background-color: var(--color-slate-50);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::selection {
+    background-color: var(--color-indigo-200);
+    color: var(--color-indigo-950);
+  }
+
+  dialog::backdrop {
+    background-color: rgb(15 23 42 / 0.55);
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+  }
+}
